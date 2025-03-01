@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.board {
+    background: linear-gradient(90deg, #3752FD 0%, #6C7FFA 53%, #9BA8F8 100%);
+}
+
+.btn-active {
+    background-color: #3752FD;
+    color: white;
+}
+
+.btn-disabled {
+    background-color: #CED6FF;
+    color: #F6F9FF;
+}
+
+.para {
+    background-color: #F4F7FF;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: #808080;
+    margin-bottom: 1.5rem;
+}
