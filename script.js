@@ -3,6 +3,10 @@ document.getElementById("btn-theme").addEventListener("click", function () {
   document.body.style.backgroundColor = randomBg;
 });
 
+document.getElementById("blogs").addEventListener("click", function () {
+  window.location.href = "./blog.html";
+});
+
 let date = new Date();
 let options = { year: "numeric", month: "short", day: "numeric" };
 let formatDate = date.toLocaleDateString("en-US", options).replace(/,/, "");
@@ -23,7 +27,7 @@ document.getElementById("btn-4").classList.add("btn-active");
 document.getElementById("btn-5").classList.add("btn-active");
 document.getElementById("btn-6").classList.add("btn-active");
 
-let navTask = 24;
+let navTask = 23;
 document.querySelector(".nav-task").innerText = navTask;
 
 function time() {
@@ -167,4 +171,14 @@ document.getElementById("btn-6").addEventListener("click", function () {
     document.getElementById("btn-6").classList.remove("btn-active");
     document.getElementById("btn-6").classList.add("btn-disabled");
   }
+});
+
+document.querySelectorAll(".btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    if (totalTask === 0) {
+      setTimeout(() => {
+        alert("Congrates!!! You have completed all the current task");
+      }, 100);
+    }
+  });
 });
